@@ -2,12 +2,13 @@ import styled from "styled-components";
 const EndHome = () => (
 
    <StyledContainer>
-      <StyledInnerContainer>
+        <div>
          <StyledHeader1>YEAR ROUND</StyledHeader1>
          <StyledLine/>
          <StyledHeader2>Must Have Items</StyledHeader2>
-      </StyledInnerContainer>
+        </div>
    </StyledContainer>
+
 
 )
 
@@ -15,10 +16,11 @@ export const StyledContainer = styled.div`
   display: flex;
   justify-content:center;
   align-items: center;
+  max-width: 100vw;
+  //position: absolute;
+  //overflow: hidden;
 `
-export const StyledInnerContainer = styled.div`
-   display: inline-block;
-`
+
 export const StyledHeader1 = styled.h1`
    font-family: Helvetica-Neue-Font, serif;
    font-weight: 700;
@@ -45,5 +47,7 @@ export const StyledLine = styled.hr`
    margin-top: 50px;
    width: 40px;
   
+`
+export const StyledProductCard = styled.div`
 `
 export default EndHome;

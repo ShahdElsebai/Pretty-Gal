@@ -14,7 +14,8 @@ export const StyledHeader = styled.div`
   height: 80px;
   display: flex;
   justify-content: start;
-  
+  //width: 100vw;
+  max-width: 100vw;
 `;
 
 export const StyledStoreName = styled.p`
