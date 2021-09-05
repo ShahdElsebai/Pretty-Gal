@@ -12,11 +12,13 @@ const EndHome = () => (
        <StyledContainer>
             <StyledProductCard>
                 <div>
+                    <p>MIDI PLEATED SKIRT</p>
                 </div>
             </StyledProductCard>
             <StyledProductCard/>
             <StyledProductCard>
                 <div>
+                    <p>VINTAGE FRAME EYEGLASSES</p>
                 </div>
             </StyledProductCard>
        </StyledContainer>
@@ -72,12 +74,24 @@ export const StyledProductCard = styled.div`
   margin-bottom: 40px;
 
   & div {
-    background: #514a4a;
+    background: #3a3535;
     width: 100%;
     height: 15%;
     top: 85%;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
+  & p {
+    font-family: Raleway, serif;
+    font-weight: 300;
+    font-size: 1rem;
+    color: white;
+
+  }
+
 
 `
 export default EndHome;

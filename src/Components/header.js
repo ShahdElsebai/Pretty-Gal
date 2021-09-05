@@ -10,7 +10,7 @@ const Header = () => (
 )
 
 export const StyledHeader = styled.div`
-  background: #514a4a;
+  background: #3a3535;
   height: 80px;
   display: flex;
   justify-content: start;

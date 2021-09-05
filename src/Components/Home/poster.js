@@ -49,7 +49,7 @@ export const StyledCardLabel =styled.h1`
   margin-top: 40px;
 `
 export const StyledButton = styled.button`
-  background-color: #514a4a;
+  background-color: #3a3535;
   width: 210px;
   height: 40px;
   margin-left: 170px;
