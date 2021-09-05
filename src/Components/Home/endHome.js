@@ -64,12 +64,13 @@ export const StyledLine = styled.hr`
   
 `
 export const StyledProductCard = styled.div`
-  
-  background-color: rgb(181, 178, 178);
-  width: 350px;
-  height: 470px;
+
+  background-color: #c6c5c5;
+  width: 300px;
+  height: 400px;
   margin: 10px;
   margin-bottom: 40px;
+
   & div {
     background: #514a4a;
     width: 100%;
@@ -77,6 +78,6 @@ export const StyledProductCard = styled.div`
     top: 85%;
     position: relative;
   }
-  
+
 `
 export default EndHome;
