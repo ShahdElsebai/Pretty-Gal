@@ -1,17 +1,20 @@
 import styled from "styled-components";
-import backgroundImg from "../assets/imgs/bggg.jpg";
+import backgroundImg from "../../assets/imgs/bggg.jpg";
 
 const Poster = () => (
-
-    <StyledPoster>
-        <StyledCard>
-            <StyledCardLabel>
-                FALL & WINTER
-            </StyledCardLabel>
-            <StyledButton>Shop now</StyledButton>
-        </StyledCard>
-    </StyledPoster>
-
+    <div>
+        <StyledPoster>
+            <StyledCard>
+                <StyledCardLabel>
+                    FALL & WINTER
+                </StyledCardLabel>
+                <StyledButton>Shop now</StyledButton>
+            </StyledCard>
+        </StyledPoster>
+        <StyledDiv>
+            <StyledLabel>FREE SHIPPING WORLWIDE</StyledLabel>
+        </StyledDiv>
+    </div>
 )
 export const StyledPoster = styled.div`
   display: flex;
@@ -60,5 +63,18 @@ export const StyledButton = styled.button`
     color: #514a4a;
   }
 
+`
+export const StyledDiv = styled.div`
+  background-color: #dadada;
+  width: 100vw;
+  height: 40px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+`
+export const StyledLabel = styled.label`
+  letter-spacing: 3px;
+  font-family: Raleway, serif;
+  font-weight: 300;
 `
 export default Poster;
