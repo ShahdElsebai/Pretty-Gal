@@ -78,6 +78,7 @@ export const StyledProductCard = styled.div`
   height: 400px;
   margin: 10px;
   margin-bottom: 40px;
+  cursor: pointer;
   //transition: width 2s;
 
 
