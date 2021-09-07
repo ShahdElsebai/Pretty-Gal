@@ -71,7 +71,7 @@ export const StyledLine = styled.hr`
   
 `
 export const StyledProductCard = styled.div`
-  
+
   background-color: #c6c5c5;
   background-image: url(${props => props.backgroundImg});
   width: 300px;
@@ -79,11 +79,10 @@ export const StyledProductCard = styled.div`
   margin: 10px;
   margin-bottom: 40px;
   //transition: width 2s;
-  
+
 
   &:hover {
     // 
-    
     ${props => props.flage && css`
       background-size: cover;
       background-repeat: no-repeat;
