@@ -28,4 +28,4 @@ export const StyledStoreName = styled.p`
   margin-left: 475px;
   margin-right: 175px;
 `;
-export default Header
+export default Header;
