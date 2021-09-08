@@ -24,6 +24,7 @@ const StyledElements = styled.li`
         margin-right: 50px;
         &:hover {
                 color: #d0cccc;
+                cursor: pointer;
         }
 
 `;
