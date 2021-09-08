@@ -33,7 +33,7 @@ const EndHome = () => (
 
 )
 
-export const StyledContainer = styled.div`
+const StyledContainer = styled.div`
   
   display: flex;
   justify-content:center;
@@ -43,7 +43,7 @@ export const StyledContainer = styled.div`
   //overflow: hidden;
 `
 
-export const StyledHeader1 = styled.h1`
+const StyledHeader1 = styled.h1`
   
    font-family: Helvetica-Neue-Font, serif;
    font-weight: 700;
@@ -52,7 +52,7 @@ export const StyledHeader1 = styled.h1`
    margin-top: 70px;
  
 `
-export const StyledHeader2 = styled.h1`
+const StyledHeader2 = styled.h1`
 
    font-family: Raleway, serif;
    font-weight: 300;
@@ -63,14 +63,14 @@ export const StyledHeader2 = styled.h1`
    letter-spacing: 8px;
    
 `
-export const StyledLine = styled.hr`
+const StyledLine = styled.hr`
   
    border-top: 1px solid black;
    margin-top: 50px;
    width: 40px;
   
 `
-export const StyledProductCard = styled.div`
+const StyledProductCard = styled.div`
 
   background-color: #c6c5c5;
   background-image: url(${props => props.backgroundImg});

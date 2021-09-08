@@ -11,10 +11,10 @@ const NavBar = () => (
         <StyledElements>Login</StyledElements>
     </StyledUl>
 )
-export const StyledUl = styled.ul`
+const StyledUl = styled.ul`
   margin-top: 15px;
 `
-export const StyledElements = styled.li`
+const StyledElements = styled.li`
         list-style-type: none;
         display: inline;
         font-family: Raleway, serif;

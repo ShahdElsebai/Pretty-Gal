@@ -16,7 +16,7 @@ const Poster = () => (
         </StyledDiv>
     </div>
 )
-export const StyledPoster = styled.div`
+const StyledPoster = styled.div`
   display: flex;
   justify-content:center;
   align-items: center;
@@ -29,7 +29,7 @@ export const StyledPoster = styled.div`
   //background-size: 100% 100%;
 `;
 
-export const StyledCard = styled.div`
+const StyledCard = styled.div`
   background-color: rgba(243, 225, 225, 0.62);
   width: 550px;
   height: 180px;
@@ -40,7 +40,7 @@ export const StyledCard = styled.div`
   //justify-content:center;
   //align-items: center;
 `
-export const StyledCardLabel =styled.h1`
+const StyledCardLabel =styled.h1`
   font-family: Helvetica-Neue-Font, serif;
   font-weight: 700;
   font-size: 3.5rem;
@@ -48,7 +48,7 @@ export const StyledCardLabel =styled.h1`
   margin-left: 52px;
   margin-top: 40px;
 `
-export const StyledButton = styled.button`
+const StyledButton = styled.button`
   background-color: #3a3535;
   width: 210px;
   height: 40px;
@@ -65,7 +65,7 @@ export const StyledButton = styled.button`
   }
 
 `
-export const StyledDiv = styled.div`
+const StyledDiv = styled.div`
   background-color: #dadada;
   width: 100vw;
   height: 40px;
@@ -73,7 +73,7 @@ export const StyledDiv = styled.div`
   justify-content:center;
   align-items: center;
 `
-export const StyledLabel = styled.label`
+const StyledLabel = styled.label`
   letter-spacing: 3px;
   font-family: Raleway, serif;
   font-weight: 300;

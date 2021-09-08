@@ -8,7 +8,7 @@ const Home = () => (
         </Styledd>
 
 )
-export const Styledd = styled.div`
+const Styledd = styled.div`
   max-width: 100vw;
   position: relative;
   overflow: hidden;

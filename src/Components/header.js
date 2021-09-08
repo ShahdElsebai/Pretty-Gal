@@ -9,7 +9,7 @@ const Header = () => (
 
 )
 
-export const StyledHeader = styled.div`
+const StyledHeader = styled.div`
   background: #3a3535;
   height: 80px;
   display: flex;
@@ -18,7 +18,7 @@ export const StyledHeader = styled.div`
   max-width: 100vw;
 `;
 
-export const StyledStoreName = styled.p`
+const StyledStoreName = styled.p`
   font-family: Raleway, serif;
   font-weight: 700;
   color: #b3b2b2;
