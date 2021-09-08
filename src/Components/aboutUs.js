@@ -75,10 +75,14 @@ const StyledInput = styled.input`
   background: #625c5c;
   color: white;
   border: none;
-  &::placeholder{
+
+  &::placeholder {
     color: white;
   }
- 
+
+  &:hover {
+    background: #7b7373;
+  }
 `
 const StyledButton = styled.button`
   cursor: pointer;
@@ -93,14 +97,17 @@ const StyledButton = styled.button`
 `
 const FacebookIcon = styled(TiSocialFacebook)`
     margin-right: 10px;
+    cursor: pointer;
 `
 const TwitterIcon = styled(TiSocialTwitter)`
     margin-right: 10px;
+    cursor: pointer;
 `
 const PinterestIcon = styled(TiSocialPinterest)`
     margin-right: 10px;
+    cursor: pointer;
 `
 const InstagramIcon = styled(IoLogoInstagram)`
-   
+    cursor: pointer;
 `
 export default AboutUs;
