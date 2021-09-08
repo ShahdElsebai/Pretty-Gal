@@ -9,6 +9,6 @@ const AboutUs = () => (
 export const StyledAboutUsContainer = styled.div`
   background: #3a3535;
   max-width: 100vw;
-  height: 320px;
+  height: 250px;
 `
 export default AboutUs;
