@@ -14,8 +14,10 @@ const StyledHeader = styled.div`
   height: 80px;
   display: flex;
   justify-content: start;
-  //width: 100vw;
+  width: 100vw;
   max-width: 100vw;
+  position: fixed;
+  z-index: 100;
 `;
 
 const StyledStoreName = styled.p`

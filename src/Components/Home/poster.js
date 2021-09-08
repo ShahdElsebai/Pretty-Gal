@@ -26,6 +26,7 @@ const StyledPoster = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size:cover;
+  margin-top: 70px;
   //background-size: 100% 100%;
 `;
 
