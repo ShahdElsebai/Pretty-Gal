@@ -6,7 +6,6 @@ const Header = () => (
         <StyledStoreName>PRETTY GAL</StyledStoreName>
         <NavBar/>
     </StyledHeader>
-
 )
 
 const StyledHeader = styled.div`
@@ -14,6 +13,7 @@ const StyledHeader = styled.div`
   height: 80px;
   display: flex;
   justify-content: start;
+  align-items: center;
   width: 100vw;
   max-width: 100vw;
   position: fixed;
@@ -25,7 +25,6 @@ const StyledStoreName = styled.p`
   font-weight: 700;
   color: #b3b2b2;
   font-size: 20px;
-  margin-top: 24px;
   letter-spacing: 10px;
   margin-left: 475px;
   margin-right: 175px;

@@ -12,7 +12,8 @@ const NavBar = () => (
     </StyledUl>
 )
 const StyledUl = styled.ul`
-  margin-top: 15px;
+  display: flex;
+  align-items: center;
 `
 const StyledElements = styled.li`
         list-style-type: none;
@@ -30,7 +31,6 @@ const StyledElements = styled.li`
 `;
 const PersonIcon = styled(IoPersonCircleSharp)`
   position: relative;
-  top: 5px;
   margin-right: 2px;
   font-size: 26px;
         
