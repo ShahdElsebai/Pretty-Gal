@@ -28,5 +28,9 @@ const StyledStoreName = styled.p`
   letter-spacing: 10px;
   margin-left: 475px;
   margin-right: 175px;
+  
+  &:hover {
+    cursor: pointer;
+  }
 `;
 export default Header;
