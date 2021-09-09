@@ -44,10 +44,40 @@ const CustomerCare = () =>(
             <StyledHeader>FAQ</StyledHeader>
             <StyledInnerContainer>
                 <div>
-
+                    <StyledParagraph fontSize = "1.3rem">Do you provide International delivery?</StyledParagraph>
+                    <StyledParagraph>I'm a paragraph. Click here to add your own text and edit<br/>
+                        me. It’s easy. Just click “Edit Text” or double click me to add<br/>
+                        your own content and make changes to the font.<br/>
+                    </StyledParagraph>
+                    <StyledParagraph fontSize = "1.3rem">How do I return an item?</StyledParagraph>
+                    <StyledParagraph>I'm a paragraph. Click here to add your own text and edit<br/>
+                        me. It’s easy. Just click “Edit Text” or double click me to add<br/>
+                        your own content and make changes to the font.<br/>
+                    </StyledParagraph>
+                    <StyledParagraph fontSize = "1.3rem">What is your returns policy?</StyledParagraph>
+                    <StyledParagraph>I'm a paragraph. Click here to add your own text and edit<br/>
+                        me. It’s easy. Just click “Edit Text” or double click me to add<br/>
+                        your own content and make changes to the font.I’m a great<br/>
+                        place for you to tell a story and let your users know a little<br/> more about you.
+                    </StyledParagraph>
                 </div>
                 <div>
-
+                    <StyledParagraph fontSize = "1.3rem">How do I track my order?</StyledParagraph>
+                    <StyledParagraph>I'm a paragraph. Click here to add your own text and edit<br/>
+                        me. It’s easy. Just click “Edit Text” or double click me to add<br/>
+                        your own content and make changes to the font.I’m a great<br/>
+                        place for you to tell a story and let your users know a little<br/> more about you.
+                    </StyledParagraph>
+                    <StyledParagraph fontSize = "1.3rem">How can I contact your couriers?</StyledParagraph>
+                    <StyledParagraph>I'm a paragraph. Click here to add your own text and edit<br/>
+                        me. It’s easy. Just click “Edit Text” or double click me to add<br/>
+                        your own content and make changes to the font.
+                    </StyledParagraph>
+                    <StyledParagraph fontSize = "1.3rem">What are your delivery options?</StyledParagraph>
+                    <StyledParagraph>I'm a paragraph. Click here to add your own text and edit<br/>
+                        me. It’s easy. Just click “Edit Text” or double click me to add<br/>
+                        your own content and make changes to the font.
+                    </StyledParagraph>
                 </div>
             </StyledInnerContainer>
         </div>

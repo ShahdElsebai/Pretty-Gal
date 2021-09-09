@@ -29,13 +29,13 @@ export const StyledHeader2 = styled.h1`
 export const StyledParagraph = styled.p`                                
   font-family: Raleway, serif;                                          
   font-weight: 300;  
-  font-size: ${props => props.fontSize};
-  font-size: 1rem;                                                      
+   font-size: ${props => props.fontSize};
+  //font-size: 1rem;                                                      
   text-align: center;                                                   
   display: block;                                                       
   padding-top: 5px;                                                     
   letter-spacing: 2px;                                                  
-  margin-bottom: 30px;                                                  
+  margin: 30px;                                                  
   line-height: 25px;                                                    
                                                                         
 `
