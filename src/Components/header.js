@@ -17,7 +17,10 @@ const StyledHeader = styled.div`
   width: 100vw;
   max-width: 100vw;
   position: fixed;
+  overflow: hidden;
+  top:0px;
   z-index: 100;
+  //margin-bottom: 100px;
 `;
 
 const StyledStoreName = styled.p`
