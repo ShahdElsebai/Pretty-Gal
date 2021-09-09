@@ -28,7 +28,8 @@ export const StyledHeader2 = styled.h1`
 `
 export const StyledParagraph = styled.p`                                
   font-family: Raleway, serif;                                          
-  font-weight: 300;                                                     
+  font-weight: 300;  
+  font-size: ${props => props.fontSize};
   font-size: 1rem;                                                      
   text-align: center;                                                   
   display: block;                                                       
