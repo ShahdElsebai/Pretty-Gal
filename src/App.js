@@ -2,16 +2,21 @@ import Header from "@Components/header"
 import Home from "@Components/Home/Home";
 import AboutUs from "@Components/aboutUs";
 import Stockists from "@Components/stockists";
+import {BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
+  <Router>
     <div>
-      <Header />
-      <Home/>
-        {/*<Stockists/>*/}
-      <AboutUs/>
+        <Header />
+        <Switch>
+            <Route path = "/" exact component = {Home}/>
+            <Route path = "/stockists" component = {Stockists}/>
 
+        </Switch>
+        <AboutUs/>
     </div>
+  </Router>
   )
 }
 
