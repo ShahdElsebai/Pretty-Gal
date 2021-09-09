@@ -7,7 +7,7 @@ const NavBar = () => (
         <StyledLink to = "/">Home</StyledLink>
         <StyledLink>Shop</StyledLink>
         <StyledLink>Sale</StyledLink>
-        <StyledLink>Customer Care</StyledLink>
+        <StyledLink to = "/customerCare">Customer Care</StyledLink>
         <StyledLink to = "/stockists">Stockists</StyledLink>
         <PersonIcon/>
         <StyledLink>Login</StyledLink>
