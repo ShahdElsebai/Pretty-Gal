@@ -22,7 +22,7 @@ export const StyledHeader2 = styled.h1`
   font-family: Raleway, serif;                                          
   font-weight: 600;                                                     
   font-size: 1rem;                                                      
-  margin-top: 50px;                                                     
+  //margin-top: 50px;                                                     
   letter-spacing: 1px;                                                  
   text-align: center;                                                   
 `
@@ -35,7 +35,7 @@ export const StyledParagraph = styled.p`
   display: block;                                                       
   padding-top: 5px;                                                     
   letter-spacing: 2px;                                                  
-  margin: 30px;                                                  
+  margin:0 30px 30px 30px;                                                  
   line-height: 25px;                                                    
                                                                         
 `
