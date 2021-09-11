@@ -5,7 +5,8 @@ export const StyledContainer = styled.div`
   justify-content: center;                                              
   max-width: 100vw;                                                     
   margin-top: 130px;                                                    
-  margin-bottom: 60px;                                                  
+  margin-bottom: 60px;   
+  min-height: ${100-44.8}vh;
                                                                         
 `
 export const StyledHeader = styled.h1`                                  

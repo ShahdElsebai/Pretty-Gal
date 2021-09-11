@@ -46,7 +46,7 @@ const AboutUs = () => {
 const StyledAboutUsContainer = styled.div`
   background: #3a3535;
   max-width: 100vw;
-  height: 250px;
+  height: 26vh;
 
 `
 const StyledForm = styled.form`

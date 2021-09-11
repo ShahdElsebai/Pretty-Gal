@@ -10,7 +10,7 @@ const NavBar = () => (
         <StyledLink to = "/customerCare">Customer Care</StyledLink>
         <StyledLink to = "/stockists">Stockists</StyledLink>
         <PersonIcon/>
-        <StyledLink>Login</StyledLink>
+        <StyledLink to = "/login">Login</StyledLink>
     </StyledUl>
 )
 const StyledUl = styled.ul`

@@ -4,6 +4,7 @@ import AboutUs from "@Components/aboutUs";
 import Stockists from "@Components/stockists";
 import {BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import CustomerCare from "@Components/customerCare";
+import Login from "@Components/login";
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
             <Route path = "/" exact component = {Home}/>
             <Route path = "/stockists" component = {Stockists}/>
             <Route path = "/customerCare" component = {CustomerCare}/>
+            <Route path = "/login" component = {Login}/>
+
         </Switch>
         <AboutUs/>
     </div>
