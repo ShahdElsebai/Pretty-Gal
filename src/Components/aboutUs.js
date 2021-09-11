@@ -30,7 +30,7 @@ const AboutUs = () => {
                     <InstagramIcon/>
                 </StyledIcon>
                 <StyledForm onSubmit={handleSubmit(onSubmit)} >
-                    <StyledInput type = "email" id ="email"  placeholder = "Enter your email here"  {...register("email",{required: true})} />
+                    <StyledInput type = "email"  placeholder = "Enter your email here"  {...register("email",{required: true})} />
                     {errors.email && <StyledLabel >Email is required!</StyledLabel>}
                     <StyledButton type="submit">Subscribe Now</StyledButton>
                 </StyledForm>
