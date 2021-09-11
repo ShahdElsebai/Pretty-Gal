@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {useForm} from "react-hook-form";
 import {
     IoLogoInstagram,
     TiSocialFacebook,
@@ -6,32 +7,42 @@ import {
     TiSocialTwitter
 } from "react-icons/all";
 
-const AboutUs = () => (
-   <StyledAboutUsContainer>
-       <StyledInnerContainer>
-        <StyledLabel>STAY CONNECTED</StyledLabel>
-       <StyledLabel>BE OUR FRIEND</StyledLabel>
-       <StyledLabel>NEED ASSISTANCE?</StyledLabel>
-       </StyledInnerContainer>
-       <StyledInnerContainer>
-           <StyledIcon>
-            <FacebookIcon/>
-            <TwitterIcon/>
-           <PinterestIcon/>
-           <InstagramIcon/>
-           </StyledIcon>
-           <StyledForm>
-            <StyledInput placeholder = "Enter your email here" />
-               <StyledButton>Subscribe Now</StyledButton>
-           </StyledForm>
-           <div>
-               <StyledLabel>123-456-7890<br/></StyledLabel>
-               <StyledLabel>info@mysite.com</StyledLabel>
-           </div>
-       </StyledInnerContainer>
-   </StyledAboutUsContainer>
 
-)
+const AboutUs = () => {
+    const{register, handleSubmit, formState: {errors}} = useForm();
+    console.log(errors);
+
+    const onSubmit = data =>{
+        console.log(data);
+    }
+    return(
+        <StyledAboutUsContainer>
+            <StyledInnerContainer>
+                <StyledLabel>STAY CONNECTED</StyledLabel>
+                <StyledLabel>BE OUR FRIEND</StyledLabel>
+                <StyledLabel>NEED ASSISTANCE?</StyledLabel>
+            </StyledInnerContainer>
+            <StyledInnerContainer>
+                <StyledIcon>
+                    <FacebookIcon/>
+                    <TwitterIcon/>
+                    <PinterestIcon/>
+                    <InstagramIcon/>
+                </StyledIcon>
+                <StyledForm onSubmit={handleSubmit(onSubmit)} >
+                    <StyledInput type = "email" id ="email"  placeholder = "Enter your email here"  {...register("email",{required: true})} />
+                    {errors.email && <StyledLabel >Email is required!</StyledLabel>}
+                    <StyledButton type="submit">Subscribe Now</StyledButton>
+                </StyledForm>
+                <div>
+                    <StyledLabel>123-456-7890<br/></StyledLabel>
+                    <StyledLabel>info@mysite.com</StyledLabel>
+                </div>
+            </StyledInnerContainer>
+        </StyledAboutUsContainer>
+
+    );
+}
 const StyledAboutUsContainer = styled.div`
   background: #3a3535;
   max-width: 100vw;
@@ -42,6 +53,7 @@ const StyledForm = styled.form`
 
   margin-right: -50px;
   margin-left: -50px;
+ 
 `
 const StyledInnerContainer =styled.div`
   display: flex;
@@ -55,10 +67,11 @@ const StyledInnerContainer =styled.div`
 const StyledLabel = styled.div`
   font-family: Raleway, serif;
   font-weight: 400;
+  //color: ${props => props.color};
   color: #d8d7d7;
   font-size: 14px;
   margin-top: 5px;
-  text-align: center;
+  
   
 `
 const StyledIcon = styled.div`
