@@ -1,21 +1,33 @@
 import styled from "styled-components";
 import {StyledContainer, StyledHeader} from "@Components/stockistsAndCustomerCare.Styled";
 import {Link} from "react-router-dom";
-const Login = () => (
+import {useForm} from "react-hook-form";
+
+const Login = () => {
+    const{register, handleSubmit, formState: {errors}} = useForm();
+    // console.log(errors);
+
+    const onSubmit = data =>{
+        console.log(data);
+    }
+    return(
     <StyledContainer>
-        <StyledForm>
+        <StyledForm onSubmit={handleSubmit(onSubmit)}>
             <div>
             <StyledHeader>Welcome Back</StyledHeader>
-            <StyledInput placeholder = "Email" type = 'email'/>
-            <StyledInput placeholder = "Password" type = 'password'/>
+            <StyledInput placeholder = "Email" type = "email"  {...register("email",{required: true})}/>
+                {errors.email && <text >Email is required!</text>}
+            <StyledInput placeholder = "Password" type = 'password'  {...register("password",{required: true, minLength: 8 })}/>
+                {errors.password && <text >Enter correct password!</text>}
             <StyledLink>Forget Password?</StyledLink>
             <StyledButton>Login</StyledButton>
                 <Styledp>Don't have an account? <Link>Sign Up</Link></Styledp>
             </div>
         </StyledForm>
     </StyledContainer>
+    );
 
-)
+}
 const StyledForm = styled.form`
   border-radius: 10px;
   width: 20vw;
@@ -24,14 +36,19 @@ const StyledForm = styled.form`
   box-shadow: 3px 5px 5px rgba(136, 136, 136);
   display: flex;
   justify-content: center;
+  & text{
+    color: red;
+    margin: 10px;
+    display: block;
+  }
  
 `
 const StyledInput = styled.input`
   width: 325px;
   height: 25px;
   display: block;
-  margin-top: 60px;
-  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-bottom: 10px;
   padding-left:5px ;
   border-top: none;
   border-left: none;
@@ -47,7 +64,6 @@ const StyledLink = styled(Link)`
   font-weight: 400;
   font-size: 1.2rem;
   color: #f42828;
-
   &:hover {
     cursor: pointer;
     color: #7f0707;
