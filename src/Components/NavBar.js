@@ -37,7 +37,7 @@ const StyledLink = styled(Link)`
         }
         text-decoration: none;
 
-`
+`;
 const StyledLabel = styled.label`
         display: inline;
         font-family: Raleway, serif;
@@ -49,8 +49,9 @@ const StyledLabel = styled.label`
                 color: #d0cccc;
                 cursor: pointer;
         }
-        text-decoration: none;
-`
+       
+
+`;
 const PersonIcon = styled(IoPersonCircleSharp)`
   position: relative;
   margin-right: 2px;
