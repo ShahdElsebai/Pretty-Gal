@@ -27,6 +27,7 @@ const PopUpStyles = styled.div `
     padding:50px;
     z-index:1000;
     width: ${props =>props.width}
+  
     `
 const OverlayStyles =styled.div`
     position: fixed;
