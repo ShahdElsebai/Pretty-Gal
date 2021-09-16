@@ -17,13 +17,9 @@ export const StyledForm = styled.form`
   //box-shadow: 3px 5px 5px rgba(136, 136, 136);
   display: flex;
   justify-content: center;
-  & text{
-    color: red;
-    margin: 10px;
-    display: block;
-  }
- 
+
 `
+
 export const StyledInput = styled.input`
   width: 320px;
   height: 25px;
@@ -113,3 +109,9 @@ export const StyledHeader = styled.h1`
   margin: 10px 0 20px 0;
   text-align: center;
 `;
+
+export const StyledErrorMessage = styled.text`
+  color: red;
+  margin-left:42px;
+  display: block;
+`
