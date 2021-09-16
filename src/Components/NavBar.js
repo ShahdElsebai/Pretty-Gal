@@ -7,7 +7,9 @@ import Login from "@Components/login";
 
 const NavBar = () => {
  const [isOpen, setIsOpen] = useState(false);
-         return(
+ const [LoginIsOpen, setLoginIsOpen] = useState(false);
+
+    return(
             <StyledUl>
                 <StyledLink to = "/">Home</StyledLink>
                 <StyledLink>Shop</StyledLink>
@@ -15,8 +17,11 @@ const NavBar = () => {
                 <StyledLink to = "/customerCare">Customer Care</StyledLink>
                 <StyledLink to = "/stockists">Stockists</StyledLink>
                 <PersonIcon/>
-                <StyledLabel onClick={()=>setIsOpen(true)}>Login</StyledLabel>
-                 <PopUpPage open = {isOpen} onClose={()=>setIsOpen(false)}><Login/></PopUpPage>
+                <StyledLabel onClick={()=>{
+                    setIsOpen(true);
+                    setLoginIsOpen(true)
+                }}>Login</StyledLabel>
+                <PopUpPage open = {isOpen} onClose={()=>setIsOpen(false)}><Login LoginOpen={LoginIsOpen} LoginOnClose = {()=>setLoginIsOpen(false)} /></PopUpPage>
             </StyledUl>
         )
 }

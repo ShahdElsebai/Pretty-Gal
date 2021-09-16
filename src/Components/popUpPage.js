@@ -26,7 +26,9 @@ const PopUpStyles = styled.div `
     background-color: white;
     padding:50px;
     z-index:1000;
-    width: ${props =>props.width}
+    width: ${props =>props.width};
+    min-height: 88vh;
+  
   
     `
 const OverlayStyles =styled.div`
