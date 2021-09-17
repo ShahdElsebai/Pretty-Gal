@@ -4,10 +4,14 @@ import {Link} from "react-router-dom";
 import {useState} from "react";
 import PopUpPage from "@Components/popUpPage";
 import Login from "@Components/login";
+import SignUp from "@Components/signUp";
 
 const NavBar = () => {
  const [isOpen, setIsOpen] = useState(false);
- const [LoginIsOpen, setLoginIsOpen] = useState(false);
+  const [popUpChildren, setPopUpChildren] = useState(<Login  LoginOnClose = {()=>{
+        console.log('HEre');
+      setPopUpChildren(<SignUp setPopUpChildren={setPopUpChildren}/>) }} />);
+
 
     return(
             <StyledUl>
@@ -19,9 +23,12 @@ const NavBar = () => {
                 <PersonIcon/>
                 <StyledLabel onClick={()=>{
                     setIsOpen(true);
-                    setLoginIsOpen(true)
+
                 }}>Login</StyledLabel>
-                <PopUpPage open = {isOpen} onClose={()=>setIsOpen(false)}><Login LoginOpen={LoginIsOpen} LoginOnClose = {()=>setLoginIsOpen(false)} /></PopUpPage>
+                <PopUpPage open = {isOpen} onClose={()=>{
+                    setIsOpen(false);
+                    setPopUpChildren(<Login  LoginOnClose = {()=>setPopUpChildren(<SignUp setPopUpChildren ={setPopUpChildren}/>) } />)
+                }}>{popUpChildren}</PopUpPage>
             </StyledUl>
         )
 }

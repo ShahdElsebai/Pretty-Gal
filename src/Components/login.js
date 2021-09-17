@@ -13,7 +13,7 @@ import {
 } from "@Components/loginAndSignUp.styled";
 import SignUp from "@Components/signUp";
 
-const Login = ({LoginOpen, LoginOnClose}) => {
+const Login = ({ LoginOnClose}) => {
     const{register, handleSubmit, formState: {errors}} = useForm();
     const [showPass, setShowPass]=useState(false);
     const togglePasswordVisibility = () =>{
@@ -22,8 +22,6 @@ const Login = ({LoginOpen, LoginOnClose}) => {
     const onSubmit = data =>{
         console.log(data);
     }
-    if(!LoginOpen)
-        return <SignUp/>;
     return(
     <StyledOuterContainer topMargin = '200px'>
         <StyledForm onSubmit={handleSubmit(onSubmit)}>

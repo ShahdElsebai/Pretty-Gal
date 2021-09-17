@@ -15,6 +15,7 @@ import {
 } from "@Components/loginAndSignUp.styled";
 
 import {AiFillFacebook, FcGoogle} from "react-icons/all";
+import Login from "@Components/login";
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 
 const schema = yup.object().shape({
@@ -28,12 +29,12 @@ const schema = yup.object().shape({
     confirmPassword: yup.string().oneOf([yup.ref("password"),null]),
 
 })
-const SignUp = ()=>{
+const SignUp = ({setPopUpChildren})=>{
 
     const [showPass, setShowPass]=useState(false);
     const [showConfirmPass, setShowConfirmPass]=useState(false);
 
-    const togglePasswordVisibility = () => {
+  const togglePasswordVisibility = () => {
         setShowPass(!showPass);
     }
     const toggleConfirmPasswordVisibility = () => {
@@ -72,7 +73,7 @@ const SignUp = ()=>{
                     <StyledErrorMessage>{errors.confirmPassword && "Passwords Should Match!"}</StyledErrorMessage>
 
                     <StyledButton type='submit'>Sign Up</StyledButton>
-                    <Styledp>Already have an account? <StyledLabel >Login</StyledLabel></Styledp>
+                    <Styledp>Already have an account? <StyledLabel  onClick={()=>setPopUpChildren(<Login  LoginOnClose = {()=>setPopUpChildren(<SignUp setPopUpChildren ={setPopUpChildren}/>)} />) }>Login</StyledLabel></Styledp>
                       </div>
             </StyledForm>
         </StyledOuterContainer>
