@@ -2,15 +2,16 @@ import styled from 'styled-components'
 import {IoPersonCircleSharp} from 'react-icons/io5';
 import {Link} from "react-router-dom";
 import {useState} from "react";
-import PopUpPage from "@Components/popUpPage";
-import Login from "@Components/login";
-import SignUp from "@Components/signUp";
+import PopUpPage from "@Components/RegistrationForms/popUpPage";
+import Login from "@Components/RegistrationForms/login";
+import SignUp from "@Components/RegistrationForms/signUp";
+import ForgetPasswordForm from "@Components/RegistrationForms/forgetPasswordForm";
 
 const NavBar = () => {
  const [isOpen, setIsOpen] = useState(false);
-  const [popUpChildren, setPopUpChildren] = useState(<Login  LoginOnClose = {()=>{
+  const [popUpChildren, setPopUpChildren] = useState(<Login  goToSignUp = {()=>{
         console.log('HEre');
-      setPopUpChildren(<SignUp setPopUpChildren={setPopUpChildren}/>) }} />);
+      setPopUpChildren(<SignUp setPopUpChildren={setPopUpChildren}/>) }} goToForgetPasswordForm = {()=>setPopUpChildren(<ForgetPasswordForm/>)} />);
 
 
     return(
@@ -27,7 +28,7 @@ const NavBar = () => {
                 }}>Login</StyledLabel>
                 <PopUpPage open = {isOpen} onClose={()=>{
                     setIsOpen(false);
-                    setPopUpChildren(<Login  LoginOnClose = {()=>setPopUpChildren(<SignUp setPopUpChildren ={setPopUpChildren}/>) } />)
+                    setPopUpChildren(<Login  goToSignUp = {()=>setPopUpChildren(<SignUp setPopUpChildren ={setPopUpChildren}/>) }  goToForgetPasswordForm = {()=>setPopUpChildren(<ForgetPasswordForm/>) }/>)
                 }}>{popUpChildren}</PopUpPage>
             </StyledUl>
         )

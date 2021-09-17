@@ -1,9 +1,10 @@
 import {useForm} from "react-hook-form";
 import {useState} from "react";
 import styled from "styled-components";
+import Login from "@Components/RegistrationForms/login";
+import ForgetPasswordForm from "@Components/RegistrationForms/forgetPasswordForm";
 import * as yup from 'yup';
 import {yupResolver} from "@hookform/resolvers/yup";
-
 import {
     CloseEyeIcon,
     OpenEyeIcon,
@@ -12,10 +13,11 @@ import {
     StyledInput,
     StyledHeader,
     StyledOuterContainer, StyledLabel, Styledp, StyledErrorMessage,
-} from "@Components/loginAndSignUp.styled";
-
+} from "@Components/RegistrationForms/RegistrationForms.styled";
 import {AiFillFacebook, FcGoogle} from "react-icons/all";
-import Login from "@Components/login";
+
+
+
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 
 const schema = yup.object().shape({
@@ -73,7 +75,7 @@ const SignUp = ({setPopUpChildren})=>{
                     <StyledErrorMessage>{errors.confirmPassword && "Passwords Should Match!"}</StyledErrorMessage>
 
                     <StyledButton type='submit'>Sign Up</StyledButton>
-                    <Styledp>Already have an account? <StyledLabel  onClick={()=>setPopUpChildren(<Login  LoginOnClose = {()=>setPopUpChildren(<SignUp setPopUpChildren ={setPopUpChildren}/>)} />) }>Login</StyledLabel></Styledp>
+                    <Styledp>Already have an account? <StyledLabel  onClick={()=>setPopUpChildren(<Login  goToSignUp = {()=>setPopUpChildren(<SignUp setPopUpChildren ={setPopUpChildren}/>) }  goToForgetPasswordForm = {()=>setPopUpChildren(<ForgetPasswordForm/>) }/>)}>Login</StyledLabel></Styledp>
                       </div>
             </StyledForm>
         </StyledOuterContainer>

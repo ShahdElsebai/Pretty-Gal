@@ -9,11 +9,10 @@ import {
     StyledLabel,
     StyledLink,
     Styledp,
-    StyledHeader, StyledOuterContainer,
-} from "@Components/loginAndSignUp.styled";
-import SignUp from "@Components/signUp";
+    StyledHeader, StyledOuterContainer, StyledErrorMessage,
+} from "@Components/RegistrationForms/RegistrationForms.styled";
 
-const Login = ({ LoginOnClose}) => {
+const Login = ({ goToSignUp, goToForgetPasswordForm}) => {
     const{register, handleSubmit, formState: {errors}} = useForm();
     const [showPass, setShowPass]=useState(false);
     const togglePasswordVisibility = () =>{
@@ -28,13 +27,13 @@ const Login = ({ LoginOnClose}) => {
             <div>
             <StyledHeader size = '2rem'>Welcome Back</StyledHeader>
             <StyledInput placeholder = "Email" type = "email"  {...register("email",{required: true})}/>
-                {errors.email && <text >Email is required!</text>}
+                {errors.email && <StyledErrorMessage >Email is required!</StyledErrorMessage>}
             <StyledInput placeholder = "Password" type = {(showPass) ? 'text' : 'password'}  {...register("password",{required: true, minLength: 8 })}/>
                 {showPass? <OpenEyeIcon onClick={togglePasswordVisibility}/>:<CloseEyeIcon onClick={togglePasswordVisibility}/>}
-                {errors.password && <text >Enter correct password!</text>}
-            <StyledLink>Forget Password?</StyledLink>
+                {errors.password && <StyledErrorMessage >Enter correct password!</StyledErrorMessage>}
+            <StyledLink onClick={goToForgetPasswordForm}>Forget Password?</StyledLink>
             <StyledButton>Login</StyledButton>
-                <Styledp>Don't have an account? <StyledLabel onClick={LoginOnClose}>Sign Up</StyledLabel></Styledp>
+                <Styledp>Don't have an account? <StyledLabel onClick={goToSignUp}>Sign Up</StyledLabel></Styledp>
             </div>
         </StyledForm>
     </StyledOuterContainer>

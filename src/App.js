@@ -4,7 +4,7 @@ import AboutUs from "@Components/aboutUs";
 import Stockists from "@Components/stockists";
 import {BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import CustomerCare from "@Components/customerCare";
-import Login from "@Components/login";
+import Login from "@Components/RegistrationForms/login";
 
 function App() {
   return (

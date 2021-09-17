@@ -36,7 +36,7 @@ export const StyledInput = styled.input`
     }
   
 `
-export const StyledLink = styled(Link)`
+export const StyledLink = styled.label`
   font-family: Raleway, serif;
   font-weight: 400;
   font-size: 1.2rem;
