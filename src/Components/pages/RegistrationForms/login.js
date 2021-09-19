@@ -10,7 +10,7 @@ import {
     StyledLink,
     Styledp,
     StyledHeader, StyledOuterContainer, StyledErrorMessage,
-} from "@Components/RegistrationForms/RegistrationForms.styled";
+} from "@Components/pages/RegistrationForms/RegistrationForms.styled";
 
 const Login = ({ goToSignUp, goToForgetPasswordForm}) => {
     const{register, handleSubmit, formState: {errors}} = useForm();

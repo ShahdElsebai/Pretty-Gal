@@ -5,7 +5,7 @@ import {
     StyledHeader2,
     StyledLine,
     StyledParagraph
-} from "@Components/stockistsAndCustomerCare.Styled";
+} from "@Components/pages/stockistsAndCustomerCare.Styled";
 import {useForm} from "react-hook-form";
 
 const CustomerCare = () => {

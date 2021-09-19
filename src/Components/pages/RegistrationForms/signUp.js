@@ -1,8 +1,8 @@
 import {useForm} from "react-hook-form";
 import {useState} from "react";
 import styled from "styled-components";
-import Login from "@Components/RegistrationForms/login";
-import ForgetPasswordForm from "@Components/RegistrationForms/forgetPasswordForm";
+import Login from "@Components/pages/RegistrationForms/login";
+import ForgetPasswordForm from "@Components/pages/RegistrationForms/forgetPasswordForm";
 import * as yup from 'yup';
 import {yupResolver} from "@hookform/resolvers/yup";
 import {
@@ -13,7 +13,7 @@ import {
     StyledInput,
     StyledHeader,
     StyledOuterContainer, StyledLabel, Styledp, StyledErrorMessage,
-} from "@Components/RegistrationForms/RegistrationForms.styled";
+} from "@Components/pages/RegistrationForms/RegistrationForms.styled";
 import {AiFillFacebook, FcGoogle} from "react-icons/all";
 
 

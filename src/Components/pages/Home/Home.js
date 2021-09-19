@@ -1,5 +1,5 @@
-import Poster from "@Components/Home/poster";
-import EndHome from "@Components/Home/endHome";
+import Poster from "@Components/pages/Home/poster";
+import EndHome from "@Components/pages/Home/endHome";
 import styled from "styled-components";
 const Home = () => (
         <Styledd>

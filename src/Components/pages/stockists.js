@@ -4,7 +4,7 @@ import {
     StyledHeader2,
     StyledLine,
     StyledParagraph
-} from "@Components/stockistsAndCustomerCare.Styled";
+} from "@Components/pages/stockistsAndCustomerCare.Styled";
 
 const Stockists = () =>(
     <StyledContainer>

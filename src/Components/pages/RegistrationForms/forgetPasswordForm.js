@@ -7,7 +7,7 @@ import {
     StyledLabel,
     Styledp,
     StyledHeader, StyledOuterContainer, StyledErrorMessage,
-} from "@Components/RegistrationForms/RegistrationForms.styled";
+} from "@Components/pages/RegistrationForms/RegistrationForms.styled";
 
 const ForgetPasswordForm = () => {
     const{register, handleSubmit, formState: {errors}} = useForm();

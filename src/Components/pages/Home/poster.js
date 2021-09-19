@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import backgroundImg from "../../assets/imgs/bggg.jpg";
+import backgroundImg from "../../../assets/imgs/bggg.jpg";
 
 const Poster = () => (
     <div>

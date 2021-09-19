@@ -1,7 +1,7 @@
 import styled, {css} from "styled-components";
-import skirtImg from "../../assets/imgs/skirt.jpg"
-import glassesImg from "../../assets/imgs/glasses.jpg"
-import bagImg from "../../assets/imgs/bag.jpg"
+import skirtImg from "../../../assets/imgs/skirt.jpg"
+import glassesImg from "../../../assets/imgs/glasses.jpg"
+import bagImg from "../../../assets/imgs/bag.jpg"
 const EndHome = () => (
     <div>
 

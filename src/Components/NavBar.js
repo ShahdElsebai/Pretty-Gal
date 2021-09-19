@@ -2,10 +2,10 @@ import styled from 'styled-components'
 import {IoPersonCircleSharp} from 'react-icons/io5';
 import {Link} from "react-router-dom";
 import {useState} from "react";
-import PopUpPage from "@Components/RegistrationForms/popUpPage";
-import Login from "@Components/RegistrationForms/login";
-import SignUp from "@Components/RegistrationForms/signUp";
-import ForgetPasswordForm from "@Components/RegistrationForms/forgetPasswordForm";
+import PopUpPage from "@Components/pages/RegistrationForms/popUpPage";
+import Login from "@Components/pages/RegistrationForms/login";
+import SignUp from "@Components/pages/RegistrationForms/signUp";
+import ForgetPasswordForm from "@Components/pages/RegistrationForms/forgetPasswordForm";
 
 const NavBar = () => {
  const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +17,7 @@ const NavBar = () => {
     return(
             <StyledUl>
                 <StyledLink to = "/">Home</StyledLink>
-                <StyledLink>Shop</StyledLink>
+                <StyledLink to = "/shop">Shop</StyledLink>
                 <StyledLink>Sale</StyledLink>
                 <StyledLink to = "/customerCare">Customer Care</StyledLink>
                 <StyledLink to = "/stockists">Stockists</StyledLink>
