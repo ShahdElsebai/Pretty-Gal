@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {ProductsData} from "../productsData";
 import Products from "@Components/products";
+import {BiPlus} from "react-icons/all";
 const Shop = () =>(
        <StyledMainDiv>
            <StyledInnerDiv>
@@ -12,11 +13,11 @@ const Shop = () =>(
                <StyledFilter>
                    <h1>Filter by</h1>
                    <hr/>
-                   <label>Price</label>
+                   <label>Price<StyledPluseIcon marginLeft = "60%"/></label>
                    <hr/>
-                   <label>Color</label>
+                   <label>Color<StyledPluseIcon marginLeft = "59%"/></label>
                    <hr/>
-                   <label>Size</label>
+                   <label>Size<StyledPluseIcon marginLeft = "63%"/></label>
                    <hr/>
                </StyledFilter>
                 <StyledGallery>
@@ -71,14 +72,14 @@ const StyledGallery = styled.div`
 `
 const StyledFilter = styled.div`
   //background-color: beige;
-  margin: 0 20px 0 5%;
+  margin: -50px 20px 0 5%;
 
   & h1 {
     font-family: Raleway, serif;
     font-weight: 400;
     font-size: 1.8rem;
     color: #333232;
-    margin: 15px;
+    margin:0 15px 15px 15px;
   }
   & hr {
     width:230px;
@@ -91,8 +92,14 @@ const StyledFilter = styled.div`
     font-size: 1.2rem;
     color: #333232;
     margin: 15px;
+    cursor: pointer;
   }
 `
 
-
+const StyledPluseIcon = styled(BiPlus)`
+    //position: relative;
+  //left: 60%;
+  margin-left: ${props => props.marginLeft};
+ 
+`
 export default Shop;
