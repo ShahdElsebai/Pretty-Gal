@@ -92,7 +92,7 @@ export const ProductsData = [
         alt: "Off White Scarf Img",
         name: "off white scarf",
         color:"offWhite",
-        esc: "I'm a Product",
+        desc: "I'm a Product",
         price: 15.99,
         zoom: false,
 
@@ -104,7 +104,7 @@ export const ProductsData = [
         alt: "Black Blouse Img",
         name: "black blouse",
         color:"black",
-        esc: "I'm a Product",
+        desc: "I'm a Product",
         price: 14.99,
         zoom: false,
 
