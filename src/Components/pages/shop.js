@@ -9,6 +9,16 @@ const Shop = () =>(
 
 
            <StyledInnerDiv>
+               <StyledFilter>
+                   <h1>Filter by</h1>
+                   <hr/>
+                   <label>Price</label>
+                   <hr/>
+                   <label>Color</label>
+                   <hr/>
+                   <label>Size</label>
+                   <hr/>
+               </StyledFilter>
                 <StyledGallery>
                    {
                        ProductsData.map(
@@ -43,7 +53,7 @@ const StyledMainDiv = styled.div`
 const StyledInnerDiv = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+  //align-items: center;
   margin-bottom: 150px;
   
   
@@ -55,8 +65,34 @@ const StyledGallery = styled.div`
   display: flex;
   flex-wrap: wrap;
   //background-color: black;
-  left: 8.2%;
+  //left: 8.2%;
   position: relative;
   
 `
+const StyledFilter = styled.div`
+  //background-color: beige;
+  margin: 0 20px 0 5%;
+
+  & h1 {
+    font-family: Raleway, serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: #333232;
+    margin: 15px;
+  }
+  & hr {
+    width:230px;
+    
+    margin: 30px 15px 30px 15px;
+  }
+  & label{
+    font-family: Raleway, serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #333232;
+    margin: 15px;
+  }
+`
+
+
 export default Shop;
