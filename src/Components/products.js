@@ -28,7 +28,7 @@ const StyledProductCard = styled.div`
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-
+  position: relative;
   &:hover {
 
     ${props => props.flage && css`

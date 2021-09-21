@@ -9,13 +9,15 @@ const Shop = () =>(
 
 
            <StyledInnerDiv>
-               {
-                   ProductsData.map(
-                       (product) => (
-                       <Products product = {product}/>
+                <StyledGallery>
+                   {
+                       ProductsData.map(
+                           (product) => (
+                           <Products product = {product}/>
+                           )
                        )
-                   )
-               }
+                   }
+                </StyledGallery>
            </StyledInnerDiv>
         </StyledMainDiv>
 
@@ -41,7 +43,20 @@ const StyledMainDiv = styled.div`
 const StyledInnerDiv = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-bottom: 150px;
+  
+  
+  
+  
+`
+const StyledGallery = styled.div`
+  width: 850px;
+  display: flex;
+  flex-wrap: wrap;
+  //background-color: black;
+  left: 5%;
+  position: relative;
   
 `
 export default Shop;
