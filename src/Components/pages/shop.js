@@ -55,7 +55,7 @@ const StyledGallery = styled.div`
   display: flex;
   flex-wrap: wrap;
   //background-color: black;
-  left: 5%;
+  left: 8.2%;
   position: relative;
   
 `
