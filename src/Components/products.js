@@ -23,7 +23,7 @@ const StyledProductCard = styled.div`
   background-image: url(${props => props.backgroundImg});
   width: 250px;
   height: 230px;
-  margin: 10px 10px 20px 10px;
+  margin: 20px 10px 20px 10px;
   cursor: pointer;
   background-position: center;
   background-size: contain;

@@ -1,8 +1,46 @@
 import styled from "styled-components";
 import {ProductsData} from "../productsData";
 import Products from "@Components/products";
-import {BiPlus} from "react-icons/all";
-const Shop = () =>(
+import {BiMinus, BiPlus} from "react-icons/all";
+import {useState} from "react";
+const Shop = () =>{
+    const [iconOpenPriceRange, setIconOpenPriceRange] = useState(<StyledPlusIcon marginLeft = "59%"/>);
+    const [openPrice,setOpenPrice] = useState(true);
+
+    const [iconOpenColor, setIconOpenColor] = useState(<StyledPlusIcon marginLeft = "59%"/>);
+    const [openColor,setOpenColor] = useState(true);
+
+    const [iconOpenSize, setIconOpenSize] = useState(<StyledPlusIcon marginLeft = "63%"/>);
+    const [openSize,setOpenSize] = useState(true);
+
+
+    const showMore = (open,setOpen,name)=>{
+      console.log(open)
+      if(name === 'price') {
+          if (open)
+              setIconOpenPriceRange(<StyledMinusIcon marginLeft="59%"/>);
+          else
+              setIconOpenPriceRange(<StyledPlusIcon marginLeft="59%"/>);
+      }
+      else if(name === 'color')
+      {
+          if (open)
+              setIconOpenColor(<StyledMinusIcon marginLeft="59%"/>);
+          else
+              setIconOpenColor(<StyledPlusIcon marginLeft="59%"/>);
+      }
+      else if(name === 'size')
+      {
+          if (open)
+              setIconOpenSize(<StyledMinusIcon marginLeft="63%"/>);
+          else
+              setIconOpenSize(<StyledPlusIcon marginLeft="63%"/>);
+      }
+      setOpen(!open);
+
+
+    }
+    return(
        <StyledMainDiv>
            <StyledInnerDiv>
                <StyledHeader>SHOP</StyledHeader>
@@ -13,11 +51,11 @@ const Shop = () =>(
                <StyledFilter>
                    <h1>Filter by</h1>
                    <hr/>
-                   <label>Price<StyledPluseIcon marginLeft = "60%"/></label>
+                   <label onClick={()=>showMore(openPrice, setOpenPrice, 'price')}>Price{iconOpenPriceRange}</label>
                    <hr/>
-                   <label>Color<StyledPluseIcon marginLeft = "59%"/></label>
+                   <label onClick={()=>showMore(openColor, setOpenColor, 'color')}>Color{iconOpenColor}</label>
                    <hr/>
-                   <label>Size<StyledPluseIcon marginLeft = "63%"/></label>
+                   <label onClick={()=>showMore(openSize,setOpenSize, 'size')}>Size{iconOpenSize}</label>
                    <hr/>
                </StyledFilter>
                 <StyledGallery>
@@ -33,6 +71,7 @@ const Shop = () =>(
         </StyledMainDiv>
 
 )
+}
 const StyledHeader = styled.h1`                                  
   font-family: Raleway, serif;                                          
   font-weight: 700;                                                     
@@ -96,9 +135,12 @@ const StyledFilter = styled.div`
   }
 `
 
-const StyledPluseIcon = styled(BiPlus)`
-    //position: relative;
-  //left: 60%;
+const StyledPlusIcon = styled(BiPlus)`
+  margin-left: ${props => props.marginLeft};
+ 
+`
+const StyledMinusIcon = styled(BiMinus)`
+    
   margin-left: ${props => props.marginLeft};
  
 `
