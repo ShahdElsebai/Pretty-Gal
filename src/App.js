@@ -4,7 +4,7 @@ import AboutUs from "@Components/pages/aboutUs";
 import Stockists from "@Components/pages/stockists";
 import {BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import CustomerCare from "@Components/pages/customerCare";
-import Shop from "@Components/pages/shop";
+import Shop from "@Components/pages/shop/shop";
 
 function App() {
   return (
